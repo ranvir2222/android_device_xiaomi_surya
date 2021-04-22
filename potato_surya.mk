@@ -23,10 +23,10 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit from common WaveOS configuration
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/wave/configs/common.mk)
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 # Device identifier
-PRODUCT_NAME := wave_surya
+PRODUCT_NAME := potato_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X3
