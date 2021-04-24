@@ -45,7 +45,6 @@
 #include "vendor_init.h"
 
 using android::base::GetProperty;
-using android::base::SetProperty;
 using std::string;
 
 std::vector<string> ro_props_default_source_order = {
@@ -96,14 +95,14 @@ void set_device_props(const string fingerprint, const string description,
 void load_device_properties() {
     string hwname = GetProperty("ro.boot.hwname", "");
 
-    string fingerprint = "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys";
-    string description = "sunfish-user 11 RQ1A.210105.002 6985033 release-keys";
+    string fingerprint = "google/sunfish/sunfish:11/RQ2A.210405.005/7181113:user/release-keys";
+    string description = "sunfish-user 11 RQ2A.210405.005 7181113 release-keys";
 
     if (hwname == "surya") {
-        set_device_props(fingerprint, description, "Poco", "surya", "M2007J20CG");
+        set_device_props(fingerprint, description, "POCO", "surya", "POCO X3 NFC");
         property_override("ro.product.mod_device", "surya_global");
     } else if (hwname == "karna") {
-        set_device_props(fingerprint, description, "Poco", "karna", "M2007J20CI");
+        set_device_props(fingerprint, description, "POCO", "karna", "POCO X3");
         property_override("ro.product.mod_device", "surya_in_global");
     }
 }
@@ -138,12 +137,12 @@ void load_dalvik_properties()
         heapmaxfree = "32m";
     }
 
-    SetProperty("dalvik.vm.heapstartsize", heapstartsize);
-    SetProperty("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    SetProperty("dalvik.vm.heapsize", heapsize);
-    SetProperty("dalvik.vm.heaptargetutilization", heaptargetutilization);
-    SetProperty("dalvik.vm.heapminfree", heapminfree);
-    SetProperty("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_override("dalvik.vm.heapstartsize", heapstartsize);
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", heapsize);
+    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 }
 
 void vendor_load_properties()
