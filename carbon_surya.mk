@@ -25,6 +25,9 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 $(call inherit-product, vendor/carbon/config/common.mk)
 $(call inherit-product, vendor/carbon/config/gsm.mk)
 
+# GApps
+$(call inherit-product, vendor/gapps/config.mk)
+
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
