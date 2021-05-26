@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/carbon_surya.mk
+    $(LOCAL_DIR)/lineage_surya.mk
 
 COMMON_LUNCH_CHOICES := \
-    carbon_surya-user \
-    carbon_surya-userdebug \
-    carbon_surya-eng
+    lineage_surya-user \
+    lineage_surya-userdebug \
+    lineage_surya-eng
