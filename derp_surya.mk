@@ -23,7 +23,7 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit from common WaveOS configuration
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/derp/configs/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 TARGET_INCLUDE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
